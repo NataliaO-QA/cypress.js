@@ -2,8 +2,8 @@ describe('Покупка аватара', function () {
 
     it('Покупка аватара', function () {
          cy.visit('https://pokemonbattle.ru/'); // зайти на сайт
-         cy.get(':nth-child(1) > .auth__input').type('komidok@yandex.ru'); // ввести логин
-         cy.get('#password').type('Gjxnf123'); // ввести пароль
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN'); // ввести логин
+         cy.get('#password').type('USER_PASSWORD'); // ввести пароль
          cy.get('.auth__button').click(); // нажать кнопку "Войти"
 
          cy.get('.header__id-text_type_profile').contains(12393); // проверить, что видим номер id пользователя
